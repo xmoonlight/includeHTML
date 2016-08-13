@@ -15,3 +15,27 @@ USAGE:
 ```html
 <div><include src="header.html"></include></div>
 ```
+
+ALL USAGE (examples):
+-------
+  1.Tag: 
+  ```html
+    <include scr="menu.html"></include>
+  ```
+
+  2.Async:  
+```javascript
+    <script>
+        includeHTML('header.html', document.getElementById('mainmenu'));
+        includeHTML('menu.html', document.getElementById('pagemenu'));
+    </script>
+```
+
+  3.Sync:
+```javascript
+    <script>
+      includeHTML('header.html', document.getElementById('mainmenu'), function(){
+        includeHTML('menu.html', document.getElementById('pagemenu'));
+      });
+    </script>
+```
