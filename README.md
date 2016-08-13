@@ -1,6 +1,8 @@
 # includeHTML
 includeHTML - Loading HTML parts via HTML tag (pure js)
-Supported protocols: http://, https://, file:/// protocols.
+
+Supported protocols: http://, https://, file:///
+
 Supported browsers: IE 9+, FF, Chrome (and may be other)
 
 USAGE:
