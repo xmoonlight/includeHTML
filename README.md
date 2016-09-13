@@ -20,7 +20,7 @@ ALL USAGE (examples):
 -------
   1.Tag: 
   ```html
-    <include scr="menu.html"></include>
+    <include src="menu.html"></include>
   ```
 
   2.Async:  
