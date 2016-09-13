@@ -21,7 +21,7 @@
                 callback(xmlhttp.responseText, statusText, xmlhttp);
             }
 
-        }
+        };
 
         try {
             xmlhttp.open("GET", url, true);
@@ -46,7 +46,7 @@
                     iframe.parentNode.removeChild(iframe);
                     includeHTMLAuto(destination);
                     if (callback) callback();
-                }
+                };
 
                 iframe.style.display = 'none';
                 iframe.name = 'includer' + src + Math.random();
@@ -57,7 +57,7 @@
                 if (callback) callback();
             }
         });
-    }
+    };
 
     function includeHTMLAuto(node) {
         var includes = node.querySelectorAll('include');
@@ -66,9 +66,9 @@
         }
     }
 
-    window.onload = function () {
+    window.addEventListener('load', function () {
         includeHTMLAuto(document.body);
-    }
+    });
 })();
 
 /*
