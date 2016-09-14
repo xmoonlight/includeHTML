@@ -43,7 +43,9 @@ ALL USAGE (examples):
           ['header.html', document.getElementById('headder')],
           ['menu.html', document.getElementById('menu')],
           ['footer.html', document.getElementById('footer')]
-      ]);
+      ], function(){
+          //optional callback
+      });
     </script>
 ```
 
