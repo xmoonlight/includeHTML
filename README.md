@@ -39,9 +39,11 @@ ALL USAGE (examples):
   3.Sync:
 ```javascript
     <script>
-      includeHTML('header.html', document.getElementById('mainmenu'), function(){
-        includeHTML('menu.html', document.getElementById('pagemenu'));
-      });
+      includeHTML([
+          ['header.html', document.getElementById('headder')],
+          ['menu.html', document.getElementById('menu')],
+          ['footer.html', document.getElementById('footer')]
+      ]);
     </script>
 ```
 
