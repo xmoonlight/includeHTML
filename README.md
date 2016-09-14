@@ -5,6 +5,11 @@ Supported protocols: http://, https://, file:///
 
 Supported browsers: IE 9+, FF, Chrome (and may be other)
 
+Installation
+-------
+* `npm i -S includehtml.js`
+* [npm package](https://www.npmjs.com/package/includehtml.js)
+
 USAGE:
 -----
 1.Insert <b>includeHTML</b> into head section in HTML file: 
