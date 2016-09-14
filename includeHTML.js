@@ -36,7 +36,7 @@
         load(destination, src, function (response, status, xhr) {
             if (status == "error") {
                 var iframe = document.createElement('iframe');
-                iframe.onload = function () {
+                iframe.addEventListener('load', function(){
                     if (!response && document.location.protocol.indexOf('http') == -1) { //всё, приехали...
                         if (navigator.userAgent.match(/Chrome/i) !== -1) //выводим подсказку.
                             msg = 'For Chrome: add parameter in shortcut link:' + "\n" + '"path_chrome_dir\chrome.exe" --allow-file-access-from-files';
@@ -46,7 +46,7 @@
                     iframe.parentNode.removeChild(iframe);
                     includeHTMLAuto(destination);
                     if (callback) callback();
-                };
+                });
 
                 iframe.style.display = 'none';
                 iframe.name = 'includer' + src + Math.random();
