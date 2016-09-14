@@ -39,3 +39,7 @@ ALL USAGE (examples):
       });
     </script>
 ```
+
+Development
+-------
+* To build script run `npm run build`
