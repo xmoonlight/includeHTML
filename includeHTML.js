@@ -60,15 +60,31 @@
         });
     }
 
-    window.includeHTML = function (src, destination, callback) {
+    function includeHTML(src, destination, callback) {
+        //if we need include few elements
         if (Array.isArray(src)) {
-            for (var i = 0; i < src.length; i++) {
-                includeSrc(src[i][0], src[i][1], destination);
+            //get current src and destination
+            var tsrc = src[0][0],
+                tdes = src[0][1];
+            //remove them from src array
+            src.splice(0, 1);
+            //if this is last src and dest
+            if (src.length === 0) {
+                //include them and call callback
+                includeHTML(tsrc, tdes, function () {
+                    if (destination) destination();
+                });
+            } else {
+                includeHTML(tsrc, tdes, function () {
+                    includeHTML(src, destination);
+                });
             }
         } else {
             includeSrc(src, destination, callback);
         }
-    };
+    }
+
+    window.includeHTML = includeHTML;
 
     function includeHTMLAuto(node) {
         var includes = node.querySelectorAll('include');
