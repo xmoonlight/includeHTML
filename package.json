@@ -4,7 +4,7 @@
   "description": "includeHTML - Loading HTML parts via HTML tag (pure js)",
   "main": "includeHTML.js",
   "scripts": {
-    "build": "uglifyjs --compress --mangle -o includeHTML.min.js -- includeHTML.js "
+    "build": "uglifyjs includeHTML.js --compress --mangle -o includeHTML.min.js"
   },
   "repository": {
     "type": "git",
