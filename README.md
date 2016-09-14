@@ -5,6 +5,11 @@ Supported protocols: http://, https://, file:///
 
 Supported browsers: IE 9+, FF, Chrome (and may be other)
 
+Installation
+-------
+* `npm i -S includehtml.js`
+* [npm package](https://www.npmjs.com/package/includehtml.js)
+
 USAGE:
 -----
 1.Insert <b>includeHTML</b> into head section in HTML file: 
@@ -34,8 +39,16 @@ ALL USAGE (examples):
   3.Sync:
 ```javascript
     <script>
-      includeHTML('header.html', document.getElementById('mainmenu'), function(){
-        includeHTML('menu.html', document.getElementById('pagemenu'));
+      includeHTML([
+          ['header.html', document.getElementById('headder')],
+          ['menu.html', document.getElementById('menu')],
+          ['footer.html', document.getElementById('footer')]
+      ], function(){
+          //optional callback
       });
     </script>
 ```
+
+Development
+-------
+* To build script run `npm run build`

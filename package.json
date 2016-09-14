@@ -1,0 +1,30 @@
+{
+  "name": "includehtml.js",
+  "version": "1.1.0",
+  "description": "includeHTML - Loading HTML parts via HTML tag (pure js)",
+  "main": "includeHTML.js",
+  "scripts": {
+    "build": "uglifyjs includeHTML.js --compress --mangle -o includeHTML.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xmoonlight/includeHTML.git"
+  },
+  "keywords": [
+    "pure",
+    "js",
+    "include",
+    "html",
+    "dynamic",
+    "loading"
+  ],
+  "author": "xmoonlight",
+  "license": "CC-BY-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/xmoonlight/includeHTML/issues"
+  },
+  "homepage": "https://github.com/xmoonlight/includeHTML#readme",
+  "devDependencies": {
+    "uglify-js": "^2.7.3"
+  }
+}
