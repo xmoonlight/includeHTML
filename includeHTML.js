@@ -33,11 +33,11 @@
 
     }
 
-    window.includeHTML = function (src, destination, callback) {
+    function includeSrc(src, destination, callback) {
         load(destination, src, function (response, status) {
             if (status == "error") {
                 var iframe = document.createElement('iframe');
-                iframe.addEventListener('load', function(){
+                iframe.addEventListener('load', function () {
                     if (!response && document.location.protocol.indexOf('http') == -1) { //всё, приехали...
                         if (navigator.userAgent.match(/Chrome/i) !== -1) //выводим подсказку.
                             msg = 'For Chrome: add parameter in shortcut link:' + "\n" + '"path_chrome_dir\chrome.exe" --allow-file-access-from-files';
@@ -58,6 +58,16 @@
                 if (callback) callback();
             }
         });
+    }
+
+    window.includeHTML = function (src, destination, callback) {
+        if (Array.isArray(src)) {
+            for (var i = 0; i < src.length; i++) {
+                includeSrc(src[i][0], src[i][1], destination);
+            }
+        } else {
+            includeSrc(src, destination, callback);
+        }
     };
 
     function includeHTMLAuto(node) {
