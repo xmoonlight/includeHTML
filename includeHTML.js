@@ -11,6 +11,7 @@
         else xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         xmlhttp.onreadystatechange = function () {
             if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+                var statusText;
                 if (xmlhttp.status == 200) {
                     dst.innerHTML = xmlhttp.responseText;
                     statusText = "success";
@@ -33,7 +34,7 @@
     }
 
     window.includeHTML = function (src, destination, callback) {
-        load(destination, src, function (response, status, xhr) {
+        load(destination, src, function (response, status) {
             if (status == "error") {
                 var iframe = document.createElement('iframe');
                 iframe.addEventListener('load', function(){
