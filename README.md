@@ -20,9 +20,13 @@ ALL USAGE (examples):
 -------
   1.Tag: 
   ```html
+<<<<<<< HEAD
     <div>
       <include scr="menu.html"></include>
     </div>
+=======
+    <include src="menu.html"></include>
+>>>>>>> origin/master
   ```
 
   2.Async:  
