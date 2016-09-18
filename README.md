@@ -20,22 +20,24 @@ ALL USAGE (examples):
 -------
   1.Tag: 
   ```html
-    <include scr="menu.html"></include>
+    <div>
+      <include scr="menu.html"></include>
+    </div>
   ```
 
   2.Async:  
 ```javascript
     <script>
-        includeHTML('header.html', document.getElementById('mainmenu'));
-        includeHTML('menu.html', document.getElementById('pagemenu'));
+       includeHTML('header.html', document.getElementById('header'));
+       includeHTML('menu.html', document.getElementById('mainMenu'));
     </script>
 ```
 
   3.Sync:
 ```javascript
     <script>
-      includeHTML('header.html', document.getElementById('mainmenu'), function(){
-        includeHTML('menu.html', document.getElementById('pagemenu'));
+      includeHTML('header.html', document.getElementById('header'), function(){
+        includeHTML('menu.html', document.getElementById('mainMenu'));
       });
     </script>
 ```

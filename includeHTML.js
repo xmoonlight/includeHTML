@@ -66,22 +66,27 @@ window.includeHTML = function (src, destination, callback) {
       }
   }
 
-window.onload=function(){includeHTMLAuto(document.body);}
+  var oa=window.onload;
+  window.onload=function(){
+     oa&&oa();
+     includeHTMLAuto(document.body);
+  }
+
 })();
 
 /*
 USAGE:
 
-  1.Tag: <include scr="menu.html"></include>
+  1.Tag: <div><include scr="menu.html"></include></div>
 
   2.Async:
       <script>
-        includeHTML('header.html', document.getElementById('mainmenu'));
-        includeHTML('menu.html', document.getElementById('pagemenu'));
+        includeHTML('header.html', document.getElementById('header'));
+        includeHTML('menu.html', document.getElementById('mainMenu'));
       </script>
 
   3.Sync:
-      includeHTML('header.html', document.getElementById('mainmenu'), function(){
-        includeHTML('menu.html', document.getElementById('pagemenu'));
+      includeHTML('header.html', document.getElementById('header'), function(){
+        includeHTML('menu.html', document.getElementById('mainMenu'));
       });
 */
