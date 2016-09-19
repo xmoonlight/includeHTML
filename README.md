@@ -21,7 +21,7 @@ ALL USAGE (examples):
   1.Tag: 
   ```html
     <div>
-      <include scr="menu.html"></include>
+      <include src="menu.html"></include>
     </div>
   ```
 
