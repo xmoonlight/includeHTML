@@ -18,14 +18,14 @@ USAGE:
 
 ALL USAGE (examples):
 -------
-  1.Tag: 
+  1.Tag:
   ```html
     <div>
       <include src="menu.html"></include>
     </div>
   ```
 
-  2.Async:  
+  2.Async:
 ```javascript
     <script>
        includeHTML('header.html', document.getElementById('header'));
