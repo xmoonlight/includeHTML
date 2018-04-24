@@ -77,7 +77,7 @@ window.includeHTML = function (src, destination, callback) {
 /*
 USAGE:
 
-  1.Tag: <div><include scr="menu.html"></include></div>
+  1.Tag: <div><include src="menu.html"></include></div>
 
   2.Async:
       <script>
