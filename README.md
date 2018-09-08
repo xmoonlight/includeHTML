@@ -13,16 +13,17 @@ USAGE:
 ```
 2.Anywhere use <b>includeHTML</b> as HTML tag:
 ```html
-<div><include src="header.html"></include></div>
+<div data-src="header.html"></div></div>
 ```
 
 ALL USAGE (examples):
 -------
   1.Tag:
   ```html
-    <div>
-      <include src="menu.html"></include>
-    </div>
+    <div data-src="menu.html"></div>
+    <div data-include="menu.html"></div>
+    <div><include src="menu.html"></include></div> <!-- old tag from v1.0 -->
+    <div data-src="log"></div>
   ```
 
   2.Async:
