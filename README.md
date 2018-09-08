@@ -23,6 +23,7 @@ ALL USAGE (examples):
     <div data-src="menu.html"></div>
     <div data-include="menu.html"></div>
     <div><include src="menu.html"></include></div> <!-- old tag from v1.0 -->
+    <div data-src="js/1.js"></div>
     <div data-src="log"></div>
   ```
 
@@ -31,6 +32,9 @@ ALL USAGE (examples):
     <script>
        includeHTML('header.html', document.getElementById('header'));
        includeHTML('menu.html', document.getElementById('mainMenu'));
+       includeHTML('green.css');
+       includeHTML('js/1.js');
+       includeHTML('log.txt','log');
     </script>
 ```
 

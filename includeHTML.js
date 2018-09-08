@@ -91,6 +91,7 @@ function loadRes(src, destination, callback) {
 }
 
 window.includeHTML = function (src, destination, callback) {
+  if(!destination) destination=0;
   if (src==='places') return includeHTMLplaces;
   else if (typeof(destination)=='string') {
      destination=document.body.querySelectorAll('include[src="'+destination+'"],div[data-src="'+destination+'"],div[data-include="'+destination+'"]')[0];
@@ -168,6 +169,8 @@ USAGE:
       <script>
         includeHTML('header.html', document.getElementById('header'));
         includeHTML('menu.html', document.getElementById('mainMenu'));
+        includeHTML('green.css');
+        includeHTML('js/1.js');
         includeHTML('log.txt', 'log');
       </script>
 
