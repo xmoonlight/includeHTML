@@ -13,7 +13,7 @@ USAGE:
 ```
 2.Anywhere use <b>includeHTML</b> as HTML tag:
 ```html
-<div data-src="header.html"></div></div>
+<div data-src="header.html"></div>
 ```
 
 ALL USAGE (examples):
