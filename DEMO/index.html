@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inlcudeHTML demo</title>
+    <style>
+      h1{font-size:24px;}
+    </style>
+  </head>
+  <body>
+    <div data-src="header.html"></div><hr>
+    <div id="mainmenu">(здесь должно быть меню...)<br>
+       <a href="javascript:includeHTML('mainmenu.html', window.document.getElementById('mainmenu'),alert('Загружено!'))">грузим?</a>
+    </div><hr/>
+    <div><h1>Я файл: index.html</h1></div><hr/>
+
+    Это лог-файл "log.txt":
+    <div data-src="log"></div>
+    <hr>
+
+
+
+    <div data-src="js/1.js">Загружаем "js/1.js" .... </div>
+    <br>
+    <div data-src="blue.css">Загружаем "blue.css".</div>
+    <br>
+    Теперь мы будем менять стиль в один клик!<br>
+    <b>Переключить на:</b><br>
+    <a href="javascript:includeHTML('green.css',0,alert('green.css - загружен!'))">зелёный</a><br>
+    <a href="javascript:includeHTML('red.css',0,alert('red.css - загружен!'))">красный</a><br>
+    <a href="javascript:includeHTML('blue.css',0,alert('blue.css - загружен!'))">синий (по-умолчанию)</a><br>
+
+    <div data-src="footer.html"></div>
+    <div data-src="folder/footer2.html"></div>
+
+
+    <script src="../includeHTML.js"></script>
+    <script>
+        includeHTML('log.txt', 'log');
+    </script>
+
+  </body>
+</html>
