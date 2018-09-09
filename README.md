@@ -7,7 +7,7 @@ Supported browsers: IE 9+, FF, Chrome (and may be other)
 
 USAGE:
 -----
-1.Insert <b>includeHTML</b> into head section in HTML file: 
+1.Insert <b>includeHTML</b> into head section (or before body close tag) in HTML file: 
 ```html
 <script src="js/includeHTML.js"></script>
 ```
