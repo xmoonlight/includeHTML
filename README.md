@@ -22,7 +22,7 @@ ALL USAGE (examples):
   ```html
     <div data-src="menu.html"></div>
     <div data-include="menu.html"></div>
-    <div><include src="menu.html"></include></div> <!-- old tag from v1.0 -->
+    <include src="menu.html"></include> <!-- old tag from v1.0 -->
     <div data-src="js/1.js"></div>
     <div data-src="log"></div>
   ```
